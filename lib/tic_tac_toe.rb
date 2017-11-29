@@ -12,6 +12,7 @@ WIN_COMBINATIONS = [
 ]
 
 def play(board)
+  input = gets
  while !over?(board)
      turn(board)
    end
@@ -58,6 +59,10 @@ end
   count
 end
 
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
+  end
+  
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -71,9 +76,7 @@ def turn(board)
   end
 end
 
-def current_player(board)
-  turn_count(board).even? ? "X" : "O"
-  end
+
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
