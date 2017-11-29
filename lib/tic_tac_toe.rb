@@ -23,6 +23,7 @@ def play(board)
  end
 
 
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -35,8 +36,8 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, player)
-  board[index] = player
+def move(board, index, current_player = "X")
+  board[index] = current_player
 end
 
 def position_taken?(board, location)
