@@ -41,7 +41,7 @@ def current_player(board)
   end
 
 def move(board, index, current_player = "X")
-  board[location.to_i-1] = current_player
+  board[index] = current_player
 end
 
 def position_taken?(board, location)
