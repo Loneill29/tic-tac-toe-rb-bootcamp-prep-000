@@ -36,8 +36,8 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, current_player)
-  board[index] = current_player
+def move(board, index, current_player(board))
+  board[index] = current_player(board)
 end
 
 def position_taken?(board, location)
@@ -50,8 +50,8 @@ end
 
 def turn_count(board)
   count = 0
-  board.each do |space|
-    if space == "X" || space == "O"
+  board.each do |move|
+    if move == "X" || move == "O"
       count += 1
   end
 end
