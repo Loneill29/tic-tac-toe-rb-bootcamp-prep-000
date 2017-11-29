@@ -20,6 +20,7 @@ def play(board)
    elsif draw?(board)
      puts "Cat's Game!"
    end
+ else turn(board)
  end
 
 def display_board(board)
