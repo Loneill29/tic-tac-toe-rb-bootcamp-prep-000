@@ -13,7 +13,6 @@ WIN_COMBINATIONS = [
 
 def play(board)
  while !over?(board)
-   user_input = gets.strip
      turn(board)
    end
    if won?(board)
