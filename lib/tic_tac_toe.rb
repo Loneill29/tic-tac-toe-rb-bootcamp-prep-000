@@ -26,7 +26,7 @@ def current_player(board)
   turn_count(board).even? ? "X" : "O"
   end
 
-  def move(board, index, current_player
+  def move(board, index, current_player)
     board[index] = current_player
   end
 
