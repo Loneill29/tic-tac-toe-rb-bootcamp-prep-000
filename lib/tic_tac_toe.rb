@@ -10,9 +10,16 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
-
+I have:
+def play(board)
+until over?(board) == true
+user_input = gets.strip
+turn(board)
+end
+end
 def play(board)
  while !over?(board)
+   user_input = gets.strip
      turn(board)
    end
    if won?(board)
