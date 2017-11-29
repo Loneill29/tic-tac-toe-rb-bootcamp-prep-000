@@ -12,7 +12,7 @@ WIN_COMBINATIONS = [
 ]
 
 def play(board)
- until over?(board)
+ while !over?(board)
      turn(board)
    end
    if won?(board)
@@ -20,7 +20,6 @@ def play(board)
    elsif draw?(board)
      puts "Cat's Game!"
    end
- else turn(board)
  end
 
 
