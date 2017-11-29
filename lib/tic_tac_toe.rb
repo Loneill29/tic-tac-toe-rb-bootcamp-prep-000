@@ -69,9 +69,7 @@ def turn(board)
   end
 end
 
-def current_player(board)
-  turn_count(board).even? ? "X" : "O"
-  end
+
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
