@@ -35,9 +35,11 @@ end
 def input_to_index(user_input)
   user_input.to_i - 1
 end
-
-def move(board, index, character)
-  board[index] = character
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
+  end
+def move(board, index, current_player)
+  board[index] = current_player
 end
 
 def position_taken?(board, location)
@@ -58,9 +60,7 @@ end
   count
 end
 
-def current_player(board)
-  turn_count(board).even? ? "X" : "O"
-  end
+
 
 def turn(board)
   puts "Please enter 1-9:"
