@@ -36,8 +36,10 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, current_player = "X" || "O")
+def move(board, index, current_player)
   board[index] = current_player
+  turn_count(board)
+  display_board(board)
 end
 
 def position_taken?(board, location)
