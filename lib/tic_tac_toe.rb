@@ -36,7 +36,7 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, current_player = nil)
+def move(board, index, current_player = player)
   board[index] = current_player
 end
 
